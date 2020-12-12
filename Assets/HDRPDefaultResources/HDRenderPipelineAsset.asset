@@ -157,8 +157,8 @@ MonoBehaviour:
     type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
-      data1: 69885426114381
-      data2: 4539628424792178688
+      data1: 64937623789389
+      data2: 4539628424792113152
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
     supportSSAO: 1
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
-    supportVolumetrics: 0
+    supportVolumetrics: 1
     increaseResolutionOfVolumetrics: 0
     supportLightLayers: 0
     lightLayerName0: Light Layer default
