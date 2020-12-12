@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1066361269945646358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8127545548288591722}
+  m_Layer: 0
+  m_Name: Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8127545548288591722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066361269945646358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.102, z: 0.469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1296280899881283018}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924866838089201520
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +43,8 @@ GameObject:
   - component: {fileID: 123422658054575781}
   - component: {fileID: 1619019745407552048}
   - component: {fileID: 1619019745407552049}
+  - component: {fileID: 919132148840186546}
+  - component: {fileID: 919132148840186545}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -27,10 +59,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924866838089201520}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.7041743, y: 0, z: 0}
-  m_LocalScale: {x: 0.23004395, y: 0.23004395, z: 0.23004395}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8127545548288591722}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41,7 +74,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924866838089201520}
-  m_Mesh: {fileID: -9129925940653390737, guid: 7ddd7c799f98bc944a452591c6c10610, type: 3}
+  m_Mesh: {fileID: -9129925940653390737, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
 --- !u!23 &123422658054575781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,11 +93,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3187400394562605980, guid: 7ddd7c799f98bc944a452591c6c10610, type: 3}
-  - {fileID: -3111209608797020911, guid: 7ddd7c799f98bc944a452591c6c10610, type: 3}
-  - {fileID: -3036961439078122660, guid: 7ddd7c799f98bc944a452591c6c10610, type: 3}
-  - {fileID: 6441688344588559617, guid: 7ddd7c799f98bc944a452591c6c10610, type: 3}
-  - {fileID: 4345841922583445123, guid: 7ddd7c799f98bc944a452591c6c10610, type: 3}
+  - {fileID: -3187400394562605980, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  - {fileID: -3111209608797020911, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  - {fileID: -3036961439078122660, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  - {fileID: 6441688344588559617, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  - {fileID: 4345841922583445123, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,4 +148,34 @@ MonoBehaviour:
   _maxHealth: 100
   _maxSize: 1
   _healthIncreaseSpeed: 10
-  _healthDecreaseSpeed: 1
+  _healthDecreaseSpeed: 0.19
+--- !u!54 &919132148840186546
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924866838089201520}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &919132148840186545
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924866838089201520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.46
+  m_Height: 2.0383978
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0088494, z: 0}
