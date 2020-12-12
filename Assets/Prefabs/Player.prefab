@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 1619019745407552049}
   - component: {fileID: 919132148840186546}
   - component: {fileID: 919132148840186545}
+  - component: {fileID: 6579537754774554482}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -93,11 +94,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3187400394562605980, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
-  - {fileID: -3111209608797020911, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
-  - {fileID: -3036961439078122660, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
-  - {fileID: 6441688344588559617, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
-  - {fileID: 4345841922583445123, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  - {fileID: 2100000, guid: 1a2c15e1a74664648bc696fe9f6753be, type: 2}
+  - {fileID: 2100000, guid: fb6eb746ea4da8d4eafe625b7162d487, type: 2}
+  - {fileID: 2100000, guid: 35af1e0aa8c00584596574da2ccf3254, type: 2}
+  - {fileID: 2100000, guid: cfece03a277761048aee03d7008cd70d, type: 2}
+  - {fileID: 2100000, guid: c005c294c0f37324b885da03aebd0c88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -179,3 +180,22 @@ CapsuleCollider:
   m_Height: 2.0383978
   m_Direction: 1
   m_Center: {x: 0, y: 1.0088494, z: 0}
+--- !u!95 &6579537754774554482
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924866838089201520}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  m_Controller: {fileID: 9100000, guid: 27e0098c52e036a43b0037ed3f66768c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c14376efd1bd6748aad3b65183727af
+guid: 2f98fc595b3b7394d95a9155bafc0204
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -8,7 +8,7 @@ ModelImporter:
     second: mixamo.com
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -33,36 +33,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: mixamo.com
-      takeName: mixamo.com
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 42
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -282,18 +253,18 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: snowman_rigged(Clone)
+    - name: snowman_1(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: "c\u043D\u0435\u0433\u043E\u0432\u0438\u043A_lp"
-      parentName: snowman_rigged(Clone)
+      parentName: snowman_1(Clone)
       position: {x: 1.7041743, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 0.23004395, y: 0.23004395, z: 0.23004395}
     - name: mixamorig:Hips
-      parentName: snowman_rigged(Clone)
+      parentName: snowman_1(Clone)
       position: {x: -0.00011881622, y: 0.7407467, z: -0.004261723}
       rotation: {x: -0.00000380528, y: -0.000017128723, z: 0.00060489745, w: 0.9999998}
       scale: {x: 1, y: 1, z: 1}
@@ -429,12 +400,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 60cb4da2c5a5e3148941aade41c949b4,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
