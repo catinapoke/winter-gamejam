@@ -157,8 +157,8 @@ MonoBehaviour:
     type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
-      data1: 64937758031693
-      data2: 4539628425347072000
+      data1: 64937758007117
+      data2: 4539628425346809856
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -297,6 +297,7 @@ MonoBehaviour:
     xrSettings:
       singlePass: 1
       occlusionMesh: 1
+      cameraJitter: 0
     postProcessQualitySettings:
       NearBlurSampleCount: 030000000500000008000000
       NearBlurMaxRadius:

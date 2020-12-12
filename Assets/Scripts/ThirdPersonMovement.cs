@@ -10,7 +10,6 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private float _currentSmoothVelocity;
-    private bool _isRunning = false;
     private Character _character;
 
     void Start()
@@ -24,7 +23,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
-        _isRunning = direction.magnitude > float.Epsilon;
+
         if (direction.magnitude > float.Epsilon)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _camera.rotation.eulerAngles.y;
@@ -33,9 +32,11 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, angle, 0);
 
             // Move player toward camera direction
+            _animator.SetBool("isRunning", true);
             _character.Move(Quaternion.Euler(0, targetAngle, 0) * Vector3.forward * _moveSpeed * Time.deltaTime);
+            return;
         }
-        _animator.SetBool("isRunning", _isRunning);
+        _animator.SetBool("isRunning", false);
         
     }
 }
