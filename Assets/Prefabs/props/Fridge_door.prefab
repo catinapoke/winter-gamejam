@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2060756764746739865}
   - component: {fileID: 3113848603990916924}
   - component: {fileID: 923919102725688310}
+  - component: {fileID: 7158475556735293372}
   m_Layer: 0
   m_Name: Fridge_door
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716601496864696867}
-  m_LocalRotation: {x: -0, y: 0.027552534, z: -0, w: 0.9996204}
+  m_LocalRotation: {x: 0, y: 0.027555268, z: 0, w: 0.9996203}
   m_LocalPosition: {x: -4.923, y: 1.616, z: 19.528}
   m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
   m_Children: []
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7158475556735293372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716601496864696867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.149663, y: 2.2931023, z: 0.20971572}
+  m_Center: {x: -0.5726378, y: -0.09710497, z: 0.089294374}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1066361269945646358
+--- !u!1 &-1543199810195877658
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8127545548288591722}
+  - component: {fileID: -3617135713050561633}
   m_Layer: 0
-  m_Name: Placeholder
+  m_Name: Placeholder (Missing Prefab)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8127545548288591722
+--- !u!4 &-3617135713050561633
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066361269945646358}
+  m_GameObject: {fileID: -1543199810195877658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.102, z: 0.469}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8127545548288591722}
   m_Father: {fileID: 1296280899881283018}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -64,7 +65,7 @@ Transform:
   m_LocalPosition: {x: 1.7041743, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8127545548288591722}
+  - {fileID: -3617135713050561633}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _smoothRotationTime: 0.05
   _camera: {fileID: 0}
-  _moveSpeed: 2
+  _moveSpeed: 5.29
 --- !u!114 &1619019745407552049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +190,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924866838089201520}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: fd2d5b8eb9782994486fa89ae6f7c542, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 60cb4da2c5a5e3148941aade41c949b4, type: 3}
   m_Controller: {fileID: 9100000, guid: 27e0098c52e036a43b0037ed3f66768c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -199,3 +200,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &6546923916990955624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8127545548288591722}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8127545548288591722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546923916990955624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: -3617135713050561633}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7668792291005438875}
   - component: {fileID: 6756206896781005886}
   - component: {fileID: 8801767780056424692}
+  - component: {fileID: 8163817973323406785}
   m_Layer: 0
   m_Name: podarok
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7000517252027138337}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.372654, y: 0.71, z: 17.53281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -80,3 +81,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8163817973323406785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7000517252027138337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.517025, y: 0.545406, z: 0.517025}
+  m_Center: {x: 0, y: -0.000000014901161, z: 0}
