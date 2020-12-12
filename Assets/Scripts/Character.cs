@@ -1,26 +1,45 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    const int MAX_HEALTH = 100;
-    const float MAX_SIZE = 1.0f;
-    private int _health = 100;
-    private bool _isInColdZone = false;
-    private float _size = 1.0f;
+    [SerializeField] private float _maxHealth = 100;
+    [SerializeField] private float _maxSize = 1.0f;
+    [SerializeField] private float _healthIncreaseSpeed = 10.0f;
+    [SerializeField] private float _healthDecreaseSpeed = 1.0f;
 
-    public int Health { get { return _health; } }
-    public bool IsInColdZone { get { return _isInColdZone; } set { _isInColdZone = value; } }
 
-    void Start()
+    public float CurrentHealth => _currentHealth;
+    public event Action<Character> OnCharacterDied;
+
+    private float _currentHealth = 100;
+    private bool _isCold = false;
+
+    private List<ColdZone> _zones = new List<ColdZone>();
+    
+    private void Awake()
     {
-        
+        // Check zone
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        
+        float gain = _healthIncreaseSpeed * (_isCold ? _healthIncreaseSpeed : -_healthDecreaseSpeed);
+        IncreaseHealth(gain * Time.fixedDeltaTime);
+        SetSize(Mathf.Lerp(0, _maxSize, _currentHealth / _maxHealth));
+    }
+
+    public void RegisterZone(ColdZone zone)
+    {
+        _zones.Add(zone);
+        _isCold = true;
+    }
+
+    public void UnregisterZone(ColdZone zone)
+    {
+        _zones.Remove(zone);
+        _isCold = _zones.Count > 0;
     }
 
     public void Move(Vector3 movement)
@@ -28,42 +47,15 @@ public class Character : MonoBehaviour
         transform.Translate(movement, Space.World);
     }
 
-    public void IncreaseHealth(int amount)
+    private void IncreaseHealth(float amount)
     {
-        _health = Mathf.Clamp(_health + amount, 0, MAX_HEALTH);
+        _currentHealth = Mathf.Min(_currentHealth + amount, _maxHealth);
+        if(_currentHealth<0f)
+            OnCharacterDied?.Invoke(this);
     }
 
-    public void DecreaseHealth(int amount)
+    private void SetSize(float amount)
     {
-        _health = Mathf.Clamp(_health - amount, 0, MAX_HEALTH);
+        transform.localScale = new Vector3(amount, amount, amount);
     }
-
-    public void IncreaseSize(float amount)
-    {
-        _size = Mathf.Clamp(_size + amount, 0, MAX_SIZE);
-        transform.localScale = new Vector3(_size, _size, _size);
-    }
-
-    public void DecreaseSize(float amount)
-    {
-        _size = Mathf.Clamp(_size - amount, 0, MAX_SIZE);
-        transform.localScale = new Vector3(_size, _size, _size);
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.CompareTag("Cold zone"))
-        {
-            _isInColdZone = true;
-        }
-    }
-
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.CompareTag("Cold zone"))
-        {
-            _isInColdZone = false;
-        }
-    }
-
 }

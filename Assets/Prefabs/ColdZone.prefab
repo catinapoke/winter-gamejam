@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3915730544374728389}
   - component: {fileID: 3059135629907954322}
   - component: {fileID: 3601766108791037861}
+  - component: {fileID: 4888606095806268521}
   m_Layer: 0
   m_Name: ColdZone
   m_TagString: Cold zone
@@ -53,3 +54,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4888606095806268521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4171112189896126792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e67ab63c4f355f45b8f11a47fd81244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
