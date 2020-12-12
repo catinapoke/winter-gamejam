@@ -231,7 +231,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6742512693728558644}
-  m_LocalRotation: {x: -0.22214402, y: 0.10203087, z: -0.36417258, w: -0.8986768}
+  m_LocalRotation: {x: -0.23141433, y: 0.0925379, z: -0.361067, w: -0.8986183}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -312,7 +312,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6742512693858493777}
-  m_LocalRotation: {x: 0.17158483, y: -0.17581329, z: 0.6911427, w: 0.679684}
+  m_LocalRotation: {x: 0.1634776, y: -0.18383963, z: 0.69431275, w: 0.6763194}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 0
-  m_BlendUpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
