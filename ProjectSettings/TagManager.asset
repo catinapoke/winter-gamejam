@@ -7,6 +7,8 @@ TagManager:
   - Cold zone
   - placeholder
   - Gift
+  - aviaTicket
+  - iceBucket
   layers:
   - Default
   - TransparentFX
