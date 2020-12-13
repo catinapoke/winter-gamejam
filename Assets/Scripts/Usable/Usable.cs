@@ -1,44 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Usable : MonoBehaviour
+namespace Usable
 {
-    protected Character _character;
-
-    // Start is called before the first frame update
-    void Start()
+    public abstract class Usable : MonoBehaviour
     {
-        
-    }
+        protected Character _character;
 
-    // Update is called once per frame
+        public virtual void Use(Character character){}
 
-
-    public virtual void Use(Character character) {  }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag(GameHelper.PLAYER_TAG))
+        private void OnCollisionEnter(Collision collision)
         {
-            // TODO: fix
-            _character = collision.gameObject.GetComponent<Character>();
-            Debug.Log("Press F to use it");
+            if (collision.gameObject.CompareTag(GameHelper.PLAYER_TAG))
+            {
+                _character = collision.gameObject.GetComponent<Character>();
+                Debug.Log("Press F to use it");
+            }
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            if (collision.gameObject.CompareTag(GameHelper.PLAYER_TAG))
+            {
+                // TODO: fix
+                _character = null;
+                Debug.Log("Leaving");
+            }
+        }
+
+        public virtual void HandleInput()
+        {
+
         }
     }
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag(GameHelper.PLAYER_TAG))
-        {
-            // TODO: fix
-            _character = null;
-            Debug.Log("Leaving");
-        }
-    }
-
-    public virtual void HandleInput()
-    {
-
-    }
-    
 }

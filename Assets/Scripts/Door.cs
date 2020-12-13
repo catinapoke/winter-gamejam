@@ -15,20 +15,20 @@ public class Door : MonoBehaviour
         transform.rotation = Quaternion.Euler(_isClosed ? _closedRotation : _openRotation);
     }
 
-    public void Use(bool open)
+    public void Use(bool close)
     {
-        if (_isRunning) return;
-        
+        if (_isRunning || _isClosed == close) return;
+        _isClosed = close;
         StopCoroutine(_openRoutine);
-        _openRoutine = OpenSmooth(_openTime, open);
+        _openRoutine = OpenSmooth(_openTime, close);
         StartCoroutine(_openRoutine);
     }
 
-    private IEnumerator OpenSmooth(float time, bool open)
+    private IEnumerator OpenSmooth(float time, bool close)
     {
         _isRunning = true;
         Quaternion startRotation = transform.rotation;
-        Quaternion endRotation = Quaternion.Euler(open ? _openRotation : _closedRotation);
+        Quaternion endRotation = Quaternion.Euler(close ? _closedRotation : _openRotation );
         for (float i = 0; i < time; i+= Time.deltaTime)
         {
             transform.rotation = Quaternion.Lerp(startRotation, endRotation, i/time);
