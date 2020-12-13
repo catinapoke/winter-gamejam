@@ -20,7 +20,6 @@ namespace Usable
         {
             if (collision.gameObject.CompareTag(GameHelper.PLAYER_TAG))
             {
-                // TODO: fix
                 _character = null;
                 Debug.Log("Leaving");
             }
