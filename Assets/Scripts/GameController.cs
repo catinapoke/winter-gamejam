@@ -2,23 +2,34 @@
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] private TouchTrigger _winTrigger;
     private Character _player;
+    private WinLoseUI _canvas;
 
     void OnEnable()
     {
-        _player = (Character)FindObjectOfType(typeof(Character));
+        _player = FindObjectOfType<Character>();
         _player.OnCharacterDied += GameOver;
+        
+        _canvas = FindObjectOfType<WinLoseUI>();
+        _winTrigger.OnTouch.AddListener(Win);
     }
 
     private void OnDisable()
     {
         _player.OnCharacterDied -= GameOver;
+        _winTrigger.OnTouch.RemoveListener(Win);
     }
 
-    void GameOver(Character character)
+    private void GameOver(Character character)
     {
         Time.timeScale = 0;
-        // TODO: Show the UI
-        // Destroy(_player.gameObject); or not destroy
+        _canvas.Lose();
+    }
+
+    private void Win()
+    {
+        Time.timeScale = 0;
+        _canvas.Win();
     }
 }
