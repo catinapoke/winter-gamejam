@@ -4805,6 +4805,11 @@ PrefabInstance:
       propertyPath: _isClosed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 312938159716774789, guid: 85d52b8001f8a4b4bba0eefb2128ef01,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 618873626335645486, guid: 85d52b8001f8a4b4bba0eefb2128ef01,
         type: 3}
       propertyPath: m_Name
@@ -4885,11 +4890,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839985094391821873, guid: bd9c7fef5d989db49b3c672d040c9df1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 839985094391821877, guid: bd9c7fef5d989db49b3c672d040c9df1,
         type: 3}
@@ -5198,6 +5198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shkaf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7038e0013a66b384f8500660b05a2b4e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7038e0013a66b384f8500660b05a2b4e, type: 3}
@@ -6018,6 +6023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shkaf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7038e0013a66b384f8500660b05a2b4e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7038e0013a66b384f8500660b05a2b4e, type: 3}
@@ -8206,11 +8216,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 458795532548246426, guid: f306ca6ce54b33c418ad92a8d1214f37,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3739158916440242442, guid: f306ca6ce54b33c418ad92a8d1214f37,
         type: 3}
       propertyPath: m_Name
