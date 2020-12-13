@@ -4,13 +4,7 @@ namespace Usable
 {
     public class PresentUsingHandler : Usable
     {
-        private Rigidbody _rigidbody;
         private bool _isUsed = false;
-
-        private void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody>();
-        }
 
         private void Update()
         {
@@ -30,7 +24,6 @@ namespace Usable
                 Transform placeholder = GameObject.FindWithTag(GameHelper.ITEMPLACE_TAG).GetComponent<Transform>();
                 transform.parent = placeholder;
             }
-            _rigidbody.isKinematic = !_isUsed;
             _isUsed = !_isUsed;
         }
 
