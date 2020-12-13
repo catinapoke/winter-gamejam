@@ -23,7 +23,7 @@ public class ToggleRoofController : MonoBehaviour
     {
         if (collider.gameObject.CompareTag(GameHelper.PLAYER_TAG))
         {
-            _isActive = !_isActive;
+            _isActive = false;
             roof.SetActive(_isActive);
         }
     }
