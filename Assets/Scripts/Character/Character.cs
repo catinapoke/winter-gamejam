@@ -15,12 +15,13 @@ public class Character : MonoBehaviour
 
     private float _currentHealth = 100;
     private bool _isCold = false;
+    private ParticleSystem _water_particles;
 
     private List<ColdZone> _zones = new List<ColdZone>();
     
     private void Awake()
     {
-        // Check zone
+        _water_particles = GetComponentInChildren<ParticleSystem>();
     }
 
     private void FixedUpdate()
@@ -28,6 +29,16 @@ public class Character : MonoBehaviour
         float gain = _healthIncreaseSpeed * (_isCold ? _healthIncreaseSpeed : -_healthDecreaseSpeed);
         IncreaseHealth(gain * Time.fixedDeltaTime);
         SetSize(Mathf.Lerp(0, _maxSize, _currentHealth / _maxHealth));
+        
+        // Particle system handling
+        if (!_isCold)
+        {
+            _water_particles.Play();
+        }
+        else
+        {
+            _water_particles.Stop();
+        }
     }
 
     public void RegisterZone(ColdZone zone)
