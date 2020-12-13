@@ -5,6 +5,12 @@ namespace Usable
     public class PresentUsingHandler : Usable
     {
         private bool _isUsed = false;
+        private AudioSource _pickUpSound;
+
+        void Start()
+        {
+            _pickUpSound = GetComponent<AudioSource>();
+        }
 
         private void Update()
         {
@@ -32,6 +38,8 @@ namespace Usable
             if (_character && Input.GetKeyDown(KeyCode.F))
             {
                 this.Use(_character);
+                if (!_pickUpSound.isPlaying)
+                    _pickUpSound.Play();
             }
         }
     }
