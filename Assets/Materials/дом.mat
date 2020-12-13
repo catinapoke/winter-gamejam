@@ -10,7 +10,7 @@ Material:
   m_Name: "\u0434\u043E\u043C"
   m_Shader: {fileID: -6465566751694194690, guid: db91603092172664db619008151d4e33,
     type: 3}
-  m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
